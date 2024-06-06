@@ -1,0 +1,33 @@
+
+.sobrenos {
+    background-color: black;
+    margin-top:60px;
+  }
+  
+  .bold {
+    display: flex;
+  }
+  
+  .bold h3 {
+    color: white;
+    font-style: bold;
+    margin-left: 80px;
+    text-transform: uppercase;
+  }
+  
+  .aboutus a {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(159, 159, 159, 1);
+    margin-right: 78px;
+    display: flex;
+    align-items: center;
+    margin-left:80px;
+  }
+  .aboutus img{
+    margin-left:80px;
+    height: 50%;
+  }
