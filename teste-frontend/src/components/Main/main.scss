@@ -180,11 +180,11 @@
 }
 
 .marcas {
-  display: flex;
+  display:flex;
   margin-left: 80px;
 }
 
-.marcas div {
+.itemMarcas {
   width: 211px;
   height: 211px;
   margin-left: 100px;
@@ -193,8 +193,8 @@
   margin-top: 60px;
 }
 
-.marcas div img {
-  margin-top: 60px;
+.itemMarcas img {
+  margin-top: 80px;
   position: relative;
   margin-left: 40px;
 }

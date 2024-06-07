@@ -4,8 +4,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const ListaProdutos = () => {
-  const mostrarInfo = (produto) =>{
-    return(alert("Nome do produto: "+ produto.productName + "\n Preço: " + produto.price))
+  const fecharModal = () =>{
+    const modal = document.querySelector('.modal');
+    modal.classList.toggle('hidden');
+  }
+  const abrirModal = (produto) =>{
+    const modal = document.querySelector('.modal');
+    modal.classList.remove('hidden');
+    const nomeModal = document.querySelector('.nomeModal');
+    const precoModal = document.querySelector('.precoModal');
+    const imagemModal = document.querySelector('.imagemModal');
+    nomeModal.textContent = produto.productName;
+    precoModal.textContent = "R$ " + produto.price;
+    imagemModal.src = produto.photo;
   }
   const settings = {
     dots: true,
@@ -91,10 +102,21 @@ const ListaProdutos = () => {
             <p className="precoAtual">R${produto.price}</p>
             <p className="parcelado"> ou 2x de R$ {produto.price / 2} sem juros</p>
             <p className="frete"> Frete grátis! </p>
-            <button className="comprar" onClick={() => mostrarInfo(produto)}>Comprar</button>
+            <button className="comprar" onClick={() => abrirModal(produto)}>Comprar</button>
           </div>
         ))}
       </Slider>
+      <div className="modal hidden">
+        <div className="conteudosModal">
+        <p className="nomeModal"></p>
+        <p className="precoModal"></p>
+        <img className="imagemModal" src=""></img>
+        <div className="botoesModal">
+        <button className="fecharModal" onClick={() => fecharModal()}>Fechar</button>
+        <button className="comprarModal"> Comprar</button>
+        </div>
+        </div>
+      </div>
     </div>
   );
 };
